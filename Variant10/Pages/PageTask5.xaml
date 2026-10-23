@@ -1,0 +1,36 @@
+<Page x:Class="Variant10.Pages.PageTask5"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Задача 5" FontFamily="Times New Roman" FontSize="16">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20">
+            <TextBlock TextWrapping="Wrap" FontWeight="Bold"
+                       Text="Задача 5. Сгенерировать массив из M столбцов и N строк, содержащий числа от -10 до 10. Отобразить его. Отсортировать элементы по возрастанию и по убыванию (две таблицы). Найти максимальный и минимальный элементы."/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                <TextBlock Text="Столбцов M:" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtM" Width="50" Text="5" Margin="10,0,0,0"/>
+                <TextBlock Text="Строк N:" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                <TextBox x:Name="txtN" Width="50" Text="4" Margin="10,0,0,0"/>
+                <Button x:Name="btnGenerate" Content="Сгенерировать" Width="150" Height="35"
+                        Margin="20,0,0,0" Click="btnGenerate_Click"/>
+                <Button x:Name="btnCalculate" Content="Выполнить" Width="150" Height="35"
+                        Margin="15,0,0,0" Click="btnCalculate_Click"/>
+            </StackPanel>
+
+            <TextBlock Text="Исходный массив:" FontWeight="Bold" Margin="0,15,0,5"/>
+            <DataGrid x:Name="dgSource" IsReadOnly="True" HorizontalAlignment="Left"
+                      CanUserAddRows="False" HeadersVisibility="Column"/>
+
+            <TextBlock Text="По возрастанию:" FontWeight="Bold" Margin="0,15,0,5"/>
+            <DataGrid x:Name="dgAsc" IsReadOnly="True" HorizontalAlignment="Left"
+                      CanUserAddRows="False" HeadersVisibility="Column"/>
+
+            <TextBlock Text="По убыванию:" FontWeight="Bold" Margin="0,15,0,5"/>
+            <DataGrid x:Name="dgDesc" IsReadOnly="True" HorizontalAlignment="Left"
+                      CanUserAddRows="False" HeadersVisibility="Column"/>
+
+            <TextBlock x:Name="txtResult" FontWeight="Bold" Margin="0,15,0,0"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

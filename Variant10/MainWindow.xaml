@@ -1,0 +1,55 @@
+<Window x:Class="Variant10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Вариант 10" Height="680" Width="900"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Верхняя зелёная панель -->
+        <Grid Grid.Row="0" Background="#FF76E333">
+            <TextBlock Text="Вариант №10"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       FontFamily="Times New Roman"/>
+            <Button x:Name="btnBack"
+                    HorizontalAlignment="Right"
+                    Content="Назад"
+                    Click="btnBack_Click"
+                    Width="80" Height="30" Margin="0,0,10,0"
+                    FontFamily="Times New Roman"/>
+        </Grid>
+
+        <!-- Меню с кнопками -->
+        <StackPanel x:Name="PanelMenu" Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Button x:Name="btnTask1" Content="Задача 1"
+                    Width="250" Height="45" Margin="0,0,0,15"
+                    FontSize="16" Click="btnTask1_Click" FontFamily="Times New Roman"/>
+            <Button x:Name="btnTask2" Content="Задача 2"
+                    Width="250" Height="45" Margin="0,0,0,15"
+                    FontSize="16" Click="btnTask2_Click" FontFamily="Times New Roman"/>
+            <Button x:Name="btnTask3" Content="Задача 3"
+                    Width="250" Height="45" Margin="0,0,0,15"
+                    FontSize="16" Click="btnTask3_Click" FontFamily="Times New Roman"/>
+            <Button x:Name="btnTask4" Content="Задача 4"
+                    Width="250" Height="45" Margin="0,0,0,15"
+                    FontSize="16" Click="btnTask4_Click" FontFamily="Times New Roman"/>
+            <Button x:Name="btnTask5" Content="Задача 5"
+                    Width="250" Height="45"
+                    FontSize="16" Click="btnTask5_Click" FontFamily="Times New Roman"/>
+        </StackPanel>
+
+        <!-- Сюда открываются страницы заданий -->
+        <Frame x:Name="FrmMain" Grid.Row="1"
+               NavigationUIVisibility="Hidden"
+               Visibility="Collapsed"/>
+    </Grid>
+</Window>

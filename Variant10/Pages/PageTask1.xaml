@@ -1,0 +1,18 @@
+<Page x:Class="Variant10.Pages.PageTask1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Задача 1" FontFamily="Times New Roman" FontSize="16">
+    <StackPanel Margin="20">
+        <TextBlock TextWrapping="Wrap" FontWeight="Bold"
+                   Text="Задача 1. Дано число. Вывести цифры, которые повторяются в записи числа больше одного раза."/>
+
+        <TextBlock Text="Введите число:" Margin="0,15,0,5"/>
+        <TextBox x:Name="txtInput" Width="300" HorizontalAlignment="Left"/>
+
+        <Button x:Name="btnCalculate" Content="Выполнить" Width="150" Height="35"
+                HorizontalAlignment="Left" Margin="0,10,0,0" Click="btnCalculate_Click"/>
+
+        <TextBlock Text="Результат:" Margin="0,15,0,5"/>
+        <TextBox x:Name="txtResult" Height="200" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True"/>
+    </StackPanel>
+</Page>
